@@ -1,0 +1,77 @@
+:root {
+  --row-base-1: #998f8f;
+  --row-contrast-1: #ae0f5e;
+  --row-base-2: #f5f599;
+  --row-contrast-2: #0b4b6f;
+
+  --circ-radius: 60px;
+  --rect-width: 300px;
+  --rect-hight: 200px;
+}
+
+table {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 860px;
+  height: 260px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+td {
+  border: 1px solid #000;
+  width: 100px;
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  padding: 6px;
+}
+
+tr:first-child td{
+  background-color: var(--row-base-1);
+  color: var(--row-contrast-1);
+}
+tr:nth-child(2) td{
+  background-color: var(--row-base-2);
+  color: var(--row-contrast-2);
+}
+
+tr:first-child:hover td{
+  background-color: var(--row-base-2);
+  color: var(--row-contrast-2);
+}
+tr:nth-child(2):hover td{
+  background-color: var(--row-base-1);
+  color: var(--row-contrast-1);
+}
+
+.flag {
+  width: var(--rect-width);
+  height: var(--rect-hight);
+  background: #fff;
+  border: 1px solid #ccc;
+}
+.circle {
+  width: calc(var(--circ-radius) * 2);
+  height: calc(var(--circ-radius) * 2);
+  background: #c40000;
+  border-radius: 50%;
+}
+
+.flag-pos {
+  position: relative;
+  margin-bottom: 30px;
+}
+.flag-pos .circle {
+  position: absolute;
+  left: calc(var(--rect-width) / 2 - var(--circ-radius));
+  top: calc(var(--rect-hight) / 2 - var(--circ-radius));
+}
+
+.flag-tf .circle {
+  transform: translate(
+    calc(var(--rect-width) / 2 - var(--circ-radius)),
+    calc(var(--rect-hight) / 2 - var(--circ-radius))
+  );
+}
