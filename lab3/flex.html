@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+</head>
+<style>
+    :root {
+        --green: #a8f3c0;
+        --blue: #7ee6ff;
+        --yellow: #f7f595;
+        --orange: #ffe0b2;
+        --pink: #f5a4f7;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+    }
+
+    .layout {
+        display: flex;
+        width: 100%;
+        height: 300px;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left {
+        flex: 0 0 30%;
+    }
+
+    .left .img {
+        flex-grow: 1;
+        background-color: var(--green);
+    }
+
+    .left .cap {
+        height: 70px;
+        background-color: var(--orange);
+    }
+
+    .middle {
+        flex-grow: 1;
+    }
+
+    .middle .top-text {
+        background-color: var(--blue);
+        height: 70px;
+    }
+
+    .middle .img {
+        background-color: var(--yellow);
+        flex-grow: 1;
+    }
+
+    .middle .bot-text {
+        background-color: var(--orange);
+        height: 70px;
+    }
+
+    .right {
+        flex: 0 0 30%;
+    }
+
+    .right .cap {
+        height: 70px;
+        background-color: var(--blue);
+    }
+
+    .right .text {
+        flex-grow: 1;
+        background-color: var(--pink);
+    }
+
+</style>
+<body>
+    <div class="layout">
+        <div class="col left">
+            <div class="img">IMG</div>
+            <div class="cap"></div>
+        </div>
+        <div class="col middle">
+            <div class="top-text">TEXT</div>
+            <div class="img">IMG</div>
+            <div class="bot-text">TEXT</div>
+        </div>
+        <div class="col right">
+            <div class="cap"></div>
+            <div class="text">TEXT</div>
+        </div>
+    </div>
+</body>
+</html>
