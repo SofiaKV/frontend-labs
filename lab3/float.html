@@ -12,6 +12,8 @@
         --yellow: #f7f595;
         --orange: #ffe0b2;
         --pink: #f5a4f7;
+
+        --s-height: 10vh;
     }
 
     body {
@@ -22,7 +24,7 @@
 
     .layout {
         width: 100%;
-        height: 300px;
+        height: 100vh;
         text-align: center;
     }
 
@@ -32,14 +34,14 @@
     }
 
     .left .img {
-        height: 230px;
-        line-height: 230px;
+        height: calc(100vh - var(--s-height));
+        line-height: calc(100vh - var(--s-height));
         background-color: var(--green);
     }
 
     .left .cap {
-        height: 70px;
-        line-height: 70px;
+        height: var(--s-height);
+        line-height: var(--s-height);
         background-color: var(--orange);
     }
 
@@ -50,20 +52,20 @@
 
     .middle .top-text {
         background-color: var(--blue);
-        height: 70px;
-        line-height: 70px;
+        height: var(--s-height);
+        line-height: var(--s-height);
     }
 
     .middle .img {
         background-color: var(--yellow);
-        height: 160px;
-        line-height: 160px;
+        height: calc(100vh - var(--s-height) * 2);
+        line-height: calc(100vh - var(--s-height) * 2);
     }
 
     .middle .bot-text {
         background-color: var(--orange);
-        height: 70px;
-        line-height: 70px;
+        height: var(--s-height);
+        line-height: var(--s-height);
     }
 
     .right {
@@ -72,13 +74,13 @@
     }
 
     .right .cap {
-        height: 70px;
+        height: var(--s-height);
         background-color: var(--blue);
     }
 
     .right .text {
-        height: 230px;
-        line-height: 230px;
+        height: calc(100vh - var(--s-height));
+        line-height: calc(100vh - var(--s-height));
         background-color: var(--pink);
     }
 </style>
